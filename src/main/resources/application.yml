@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: crash-demo-app
+  cloud:
+    stream:
+      bindings:
+        BUSINESS_EVENTS_IN:
+          group: ${spring.application.name}
+          destination: BUSINESS_EVENTS
